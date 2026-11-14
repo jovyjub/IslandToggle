@@ -5,8 +5,8 @@ import android.content.pm.PackageManager
 import android.provider.Settings
 
 object IslandControl {
-    const val TARGET_PKG = "com.jamworks.dynamicspot"
-    private const val DEFAULT_SERVICE = "$TARGET_PKG/$TARGET_PKG.OverlayServiceSpot"
+    const val TARGET_PKG = "com.droidbubble.app"
+    private const val DEFAULT_SERVICE = "private const val DEFAULT_SERVICE = "$TARGET_PKG/$TARGET_PKG.service.IslandAccessibilityService""
     private const val PREFS = "island"
     private const val KEY_LAST = "last_component"
 
