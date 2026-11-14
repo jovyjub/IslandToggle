@@ -6,7 +6,7 @@ import android.provider.Settings
 
 object IslandControl {
     const val TARGET_PKG = "com.droidbubble.app"
-    private const val DEFAULT_SERVICE = "private const val DEFAULT_SERVICE = "$TARGET_PKG/$TARGET_PKG.service.IslandAccessibilityService""
+    private const val DEFAULT_SERVICE = "com.droidbubble.app/com.droidbubble.app.service.IslandAccessibilityService"
     private const val PREFS = "island"
     private const val KEY_LAST = "last_component"
 
@@ -22,7 +22,6 @@ object IslandControl {
 
     fun isOn(ctx: Context) = enabledList(ctx).any { isTarget(it) }
 
-    /** Turns the island's accessibility service on/off. Needs WRITE_SECURE_SETTINGS. */
     fun set(ctx: Context, on: Boolean) {
         val prefs = ctx.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
         val list = enabledList(ctx).toMutableList()
